@@ -17,3 +17,8 @@ langchain-classic
 langchain-huggingface
 langchain-groq
 fastembed 
+langfuse
+qdrant_client
+datasets
+ragas
+

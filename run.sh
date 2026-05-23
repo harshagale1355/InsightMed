@@ -1,10 +1,10 @@
 #!/bin/bash
 echo "🚀 Starting InsightMed Chatbot System..."
 
-# Run Backend in conda environment
+# Run Backend
 echo "🟢 Starting FastAPI Backend..."
 source ./venv/bin/activate
-python app.py &
+uvicorn app:app --reload &
 BACKEND_PID=$!
 
 echo "🟢 Starting React Frontend..."
@@ -14,6 +14,7 @@ FRONTEND_PID=$!
 
 echo "====================================="
 echo "✅ Both Backend (8000) and Frontend (3000) are running."
+echo "🟢 API Docs: http://localhost:8000/docs"
 echo "🟢 UI: http://localhost:3000"
 echo "🛑 Press Ctrl+C to stop both processes."
 echo "====================================="
